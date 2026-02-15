@@ -5,116 +5,104 @@ body {
   overflow-x: hidden;
 
   font-family: var(--primary-font);
-  font-size: var(--fs-s);
-  font-weight: var(--fw-light);
-  letter-spacing: var(--ls-main);
+  font-size: var(--fs-m);
+  /* Змінив з S на M для кращої читабельності */
+  font-weight: var(--fw-regular);
   line-height: var(--lh-p);
   color: var(--color-dark);
 
   background-color: var(--color-light);
+
+  /* Покращення відображення шрифтів */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .section {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  /* Трохи збільшив відступи для "повітря" */
+  padding-bottom: 40px;
 }
 
 .container {
-  max-width: 380px;
+  max-width: 480px;
+  /* Стандарт для сучасних мобілок */
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--second-font);
+  line-height: var(--lh-h);
+  margin: 0;
+}
+
 h1 {
   font-size: var(--fs-h1);
   font-weight: var(--fw-extrabold);
-  line-height: var(--lh-h);
-  letter-spacing: var(--ls-main);
-
 }
 
 h2 {
   margin-bottom: 24px;
   font-size: var(--fs-h2);
-  font-weight: var(--fw-extrabold);
-  line-height: var(--lh-h);
-  letter-spacing: var(--ls-main);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  /* Зазвичай заголовки секцій по центру */
 }
 
+/* --- Акценти та допоміжні класи --- */
 .accent-text {
   font-weight: var(--fw-semibold);
 }
 
-.accent-light-color {
-  color: var(--color-accent-light);
-}
-
-.accent-dark-color {
-  color: var(--color-accent-dark);
+.accent-color {
+  color: var(--color-primary);
 }
 
 .uppercase-text {
   text-transform: uppercase;
 }
 
-.nav-link,
-button {
-  letter-spacing: var(--ls-tight);
-}
-
-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  line-height: var(--lh-b);
-}
-
-.button-call {
-  width: 197px;
-  padding: 10px 24px;
-  font-size: var(--fs-m);
-  font-weight: var(--fw-semibold);
-}
-
+/* Клас для приховування заголовків (SEO) */
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
   border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Styles for Desktop devices */
 @media screen and (min-width: 1240px) {
   body {
     font-size: var(--fs-l);
-    font-weight: var(--fw-regular);
   }
 
   .section {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .container {
-    max-width: 1320px;
-    padding-left: 40px;
-    padding-right: 40px;
+    max-width: 1240px;
+    /* Згідно з твоїм брейкпоінтом */
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
-  .button-call {
-    min-width: 232px;
-    padding: 16px 32px;
-    font-size: var(--fs-l);
+  h2 {
+    margin-bottom: 48px;
   }
 }

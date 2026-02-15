@@ -17,9 +17,9 @@
 @import url('./layout/footer.css');
 
 /*Sections styles */
-@import url('./sections/hero-section.css');
-@import url('./sections/advantages-section.css');
-@import url('./sections/traditions-section.css');
-@import url('./sections/chefs-section.css');
-@import url('./sections/formats-section.css');
-@import url('./sections/contacts-section.css');
+@import url('./sections/.css');
+@import url('./sections/.css');
+@import url('./sections/.css');
+@import url('./sections/.css');
+@import url('./sections/.css');
+@import url('./sections/.css');

@@ -1,34 +1,37 @@
-/*  ----------------  Кнопка  "Burger"   ----------- */
-
-
-@media screen and (min-width: 1240px) {
-    .burger-menu {
-        display: none;
-    }
+/* Базовий клас для всіх кнопок */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color var(--anim-fast),
+        background-color var(--anim-fast),
+        border-color var(--anim-fast),
+        opacity var(--anim-fast),
+        transform var(--anim-fast);
 }
 
-/*    ----------------  Кнопки "Замовити дзінок"   ----------- */
+/* --- Кнопка "Замовити дзвінок" (Акцентна) --- */
 .button-call {
     padding: 10px 24px;
-    border: 2px solid var(--color-accent-light);
-    border-radius: 8px;
-
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    color: var(--color-light);
     font-size: var(--fs-m);
     font-weight: var(--fw-semibold);
-    color: var(--color-light);
-
-    background-color: var(--color-accent-light);
-    transition:
-        color var(--anim-fast),
-        background-color var(--anim-fast),
-        border-color var(--anim-fast);
 }
 
 .button-call:hover,
 .button-call:focus {
-    color: var(--color-accent-dark);
-    background-color: var(--color-light);
-    border-color: var(--color-accent-dark);
+    background-color: transparent;
+    color: var(--color-primary);
+    /* Або навпаки, як ти хотів: */
+    /* background-color: var(--color-brand-light); */
 }
 
 @media screen and (min-width: 1240px) {
@@ -38,97 +41,24 @@
     }
 }
 
-/*    ----------------  Кнопка в Heder "Замовити дзінок"   ----------- */
-.header-button {
-    display: none;
-}
-
-@media screen and (min-width: 1240px) {
-    .header-button {
-        display: flex;
-    }
-}
-
-/*    ----------------  Кнопка в Hero "Замовити дзінок"   ----------- */
-.hero-button {
-    margin: 0 auto 32px;
-}
-
-@media screen and (min-width: 1240px) {
-    .hero-button {
-        display: none;
-    }
-}
-
-/*    ----------------  Кнопки Вліво/Вправо "Формати"   ----------- */
-.formats-button {
-    display: none;
-}
-
-@media screen and (min-width: 1240px) {
-    .formats-button {
-        display: flex;
-        width: 44px;
-        height: 44px;
-        border: 2px solid var(--color-dark);
-        border-radius: 50%;
-
-        color: var(--color-dark);
-        background-color: transparent;
-
-        transition:
-            color var(--anim-fast),
-            background-color var(--anim-fast),
-            border-color var(--anim-fast);
-    }
-
-    .formats-button:hover,
-    .formats-button:focus {
-        color: var(--color-light);
-        background-color: var(--color-accent-light);
-        border-color: var(--color-accent-light);
-    }
-
-    .formats-button-next {
-        transform: rotate(180deg);
-    }
-}
-
-/*    ----------------  Кнопка в формі зворотнього зв'язку "Замовити дзінок"   ----------- */
-.contacts-button {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 197px;
-}
-
-/*    ----------------  Кнопки "Нагору/Вниз"   ----------- */
-
+/* --- Кнопки "Нагору / Вниз" (Scroll) --- */
 .button-scroll {
     position: fixed;
-    z-index: 1000;
+    z-index: 90;
+    /* Трохи нижче за модалку */
     width: 48px;
     height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 2px solid var(--color-accent-light);
     border-radius: 50%;
-    color: var(--color-dark);
-    background-color: var(--color-accent-light);
-    opacity: 0.5;
-
-    transition:
-        background-color var(--anim-fast),
-        border-color var(--anim-fast),
-        opacity var(--anim-fast);
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-brand-light);
+    color: var(--color-primary);
+    opacity: 0.6;
 }
 
 .button-scroll:hover,
 .button-scroll:focus {
-    border-color: var(--color-accent-dark);
-    background-color: var(--color-light);
     opacity: 1;
+    transform: scale(1.1);
 }
 
 .button-scroll-up {
@@ -141,20 +71,49 @@
     right: 20px;
 }
 
-/*    ----------------  Кнопка закриття мобільного меню   ----------- */
+.button-scroll-icon {
+    fill: currentColor;
+    /* Іконка завжди в колір тексту кнопки */
+}
 
+.button-scroll-up .button-scroll-icon {
+    transform: rotate(-90deg);
+    /* Якщо іконка стрілки дивиться вбік */
+}
+
+.button-scroll-down .button-scroll-icon {
+    transform: rotate(90deg);
+}
+
+/* --- Кнопка закриття (Modal / Menu) --- */
 .button-close {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     background-color: transparent;
-    transition: stroke var(--anim-fast);
+    border: none;
+    stroke: var(--color-dark);
+}
+
+.button-close:hover {
+    stroke: var(--color-primary);
+    transform: rotate(90deg);
+    /* Легкий ефект при наведенні */
 }
 
 .mobile-menu-button-close {
     top: 16px;
     right: 24px;
+}
+
+/* --- Burger (тільки логіка відображення) --- */
+.burger-menu {
+    background: none;
+    border: none;
+}
+
+@media screen and (min-width: 1240px) {
+    .burger-menu {
+        display: none;
+    }
 }
