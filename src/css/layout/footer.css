@@ -50,33 +50,7 @@
     font-size: var();
 }
 
-/* Десктопна версія */
+
 @media screen and (min-width: 767px) {
-    .footer-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .footer-nav {
-        display: flex;
-        gap: 80px;
-    }
-
-    .nav-list {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .socials-list {
-        justify-content: flex-start;
-    }
-
-    .footer-legal {
-        align-self: flex-end;
-    }
-}
-
+  
 @media screen and (min-width: 1240px) {}
