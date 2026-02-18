@@ -92,27 +92,25 @@
 .modal-submit-btn {
     width: 100%;
     margin-top: 10px;
-   
+
 }
 
 .form-policy {
     margin-top: 16px;
     font-size: 12px;
     text-align: center;
-    color: var(-;
-}
-
-.policy-link {
     color: var();
-    text-decoration: underline;
-}
+    }
 
-@media screen and (min-width: 767px) {
-  .modal 
+    .policy-link {
+        color: var();
+        text-decoration: underline;
+    }
+
+    @media screen and (min-width: 767px) {
+        .modal {
         max-width: 500px;
         padding: 60px;}
-
-@media screen and (min-width: 1240px) {
-    
     }
-}
+
+    @media screen and (min-width: 1240px) {}
