@@ -26,7 +26,6 @@
     }
 }
 
-
 .button-scroll {
     position: fixed;
     z-index: 90;
@@ -88,8 +87,17 @@
 }
 
 .burger-menu {
-    background: none;
+    background-color: transparent;
     border: none;
+    padding: 0;
+    line-height: 0;
+    stroke: var();
+    cursor: pointer;
+    transition: stroke var(--anim-fast);
+}
+
+.burger-menu:hover {
+    stroke: var();
 }
 
 @media screen and (min-width: 1240px) {
