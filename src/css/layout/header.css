@@ -21,22 +21,18 @@
 
 .nav-list {
     display: none;
-    /* Приховано для мобільних пристроїв */
-}
+   }
 
-/* Логотип */
 .logo-icon {
-    /* Використовуємо основний брендовий колір */
-    fill: var(--color-primary);
+    fill: var();
     transition: fill var(--anim-fast);
 }
 
 .logo:hover .logo-icon {
-    fill: var(--color-light);
+    fill: var();
 }
 
-/* Десктопна навігація */
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 767px) {
     .nav-list {
         display: flex;
         gap: 40px;
@@ -44,49 +40,24 @@
     }
 
     .nav-link {
-        color: var(--color-light);
-        font-family: var(--primary-font);
-        font-size: var(--fs-m);
-        font-weight: var(--fw-regular);
-        line-height: var(--lh-p);
+        color: var();
+        font-family: var();
+        font-size: var();
+        font-weight: var();
+        line-height: var();
         transition: color var(--anim-fast);
     }
 
     .nav-link:hover,
     .nav-link:focus,
     .nav-link.is-current {
-        color: var(--color-primary);
-        font-weight: var(--fw-semibold);
+        color: var();
+        font-weight: var();
     }
 
-    .burger-menu-btn {
+    .burger-menu {
         display: none;
     }
 }
 
-/* Кнопка в хедері (Замовити дзвінок) */
-.header-button {
-    display: none;
-}
-
 @media screen and (min-width: 1240px) {
-    .header-button {
-        display: block;
-        /* Стилі самої кнопки зазвичай у окремому файлі buttons.css */
-    }
-}
-
-/* Бургер-меню (Кнопка відкриття) */
-.burger-menu-btn {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    line-height: 0;
-    stroke: var(--color-light);
-    cursor: pointer;
-    transition: stroke var(--anim-fast);
-}
-
-.burger-menu-btn:hover {
-    stroke: var(--color-primary);
-}
