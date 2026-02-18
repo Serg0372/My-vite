@@ -5,13 +5,12 @@ body {
   overflow-x: hidden;
 
   font-family: var(--primary-font);
-  font-size: var(--fs-m);
-  /* Змінив з S на M для кращої читабельності */
-  font-weight: var(--fw-regular);
-  line-height: var(--lh-p);
-  color: var(--color-dark);
+  font-size: var();
+  font-weight: var();
+  line-height: var();
+  color: var();
 
-  background-color: var(--color-light);
+  background-color: var();
 
   /* Покращення відображення шрифтів */
   text-rendering: optimizeLegibility;
@@ -39,31 +38,31 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--second-font);
-  line-height: var(--lh-h);
+  font-family: var();
+  line-height: var();
   margin: 0;
 }
 
 h1 {
-  font-size: var(--fs-h1);
-  font-weight: var(--fw-extrabold);
+  font-size: var();
+  font-weight: var();
 }
 
 h2 {
   margin-bottom: 24px;
-  font-size: var(--fs-h2);
-  font-weight: var(--fw-bold);
+  font-size: var();
+  font-weight: var();
   text-align: center;
   /* Зазвичай заголовки секцій по центру */
 }
 
 /* --- Акценти та допоміжні класи --- */
 .accent-text {
-  font-weight: var(--fw-semibold);
+  font-weight: var();
 }
 
 .accent-color {
-  color: var(--color-primary);
+  color: var();
 }
 
 .uppercase-text {
@@ -87,7 +86,7 @@ h2 {
 /* Styles for Desktop devices */
 @media screen and (min-width: 1240px) {
   body {
-    font-size: var(--fs-l);
+    font-size: var();
   }
 
   .section {
