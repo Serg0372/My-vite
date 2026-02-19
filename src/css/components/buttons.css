@@ -16,42 +16,22 @@
         transform var(--anim-fast);
 }
 
-/* --- Кнопка "Замовити дзвінок" (Акцентна) --- */
-.button-call {
-    padding: 10px 24px;
-    background-color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-    color: var(--color-light);
-    font-size: var(--fs-m);
-    font-weight: var(--fw-semibold);
-}
+@media screen and (min-width: 767px) {
+    }
 
-.button-call:hover,
-.button-call:focus {
-    background-color: transparent;
-    color: var(--color-primary);
-    /* Або навпаки, як ти хотів: */
-    /* background-color: var(--color-brand-light); */
-}
 
 @media screen and (min-width: 1240px) {
-    .button-call {
-        padding: 16px 32px;
-        font-size: var(--fs-l);
-    }
 }
 
-/* --- Кнопки "Нагору / Вниз" (Scroll) --- */
 .button-scroll {
     position: fixed;
     z-index: 90;
-    /* Трохи нижче за модалку */
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: 2px solid var(--color-primary);
-    background-color: var(--color-brand-light);
-    color: var(--color-primary);
+    border: 2px solid var();
+    background-color: var();
+    color: var();
     opacity: 0.6;
 }
 
@@ -73,13 +53,11 @@
 
 .button-scroll-icon {
     fill: currentColor;
-    /* Іконка завжди в колір тексту кнопки */
-}
+  }
 
 .button-scroll-up .button-scroll-icon {
     transform: rotate(-90deg);
-    /* Якщо іконка стрілки дивиться вбік */
-}
+  }
 
 .button-scroll-down .button-scroll-icon {
     transform: rotate(90deg);
@@ -92,24 +70,31 @@
     height: 32px;
     background-color: transparent;
     border: none;
-    stroke: var(--color-dark);
+    stroke: var();
 }
 
 .button-close:hover {
-    stroke: var(--color-primary);
+    stroke: var();
     transform: rotate(90deg);
-    /* Легкий ефект при наведенні */
-}
+ }
 
 .mobile-menu-button-close {
     top: 16px;
     right: 24px;
 }
 
-/* --- Burger (тільки логіка відображення) --- */
 .burger-menu {
-    background: none;
+    background-color: transparent;
     border: none;
+    padding: 0;
+    line-height: 0;
+    stroke: var();
+    cursor: pointer;
+    transition: stroke var(--anim-fast);
+}
+
+.burger-menu:hover {
+    stroke: var();
 }
 
 @media screen and (min-width: 1240px) {
