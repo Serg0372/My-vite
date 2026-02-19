@@ -1,28 +1,36 @@
-/* Базовий клас для всіх кнопок */
+/*------------------- Базовий клас для всіх кнопок -------------------*/
 .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     margin: 0;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    color: var();
     font-family: inherit;
-    transition: color var(--anim-fast),
-        background-color var(--anim-fast),
-        border-color var(--anim-fast),
-        opacity var(--anim-fast),
-        transform var(--anim-fast);
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    opacity: 0.6;
+    background-color: transparent;
+    transition: color var(--transition),
+        background-color var(--transition),
+        border-color var(--transition),
+        opacity var(--transition),
+        transform var(--transition);
 }
 
-@media screen and (min-width: 767px) {
-    }
-
-
-@media screen and (min-width: 1240px) {
+.button:hover,
+.button:focus {
+    color: var();
+    background-color: var();
+    border-color: var();
+    opacity: 1;
+    transform: scale(1.1);
 }
 
+
+
+/* ------------------- Кнопка прокрутки -------------------*/
 .button-scroll {
     position: fixed;
     z-index: 90;
@@ -51,19 +59,20 @@
     right: 20px;
 }
 
+/* 
 .button-scroll-icon {
     fill: currentColor;
-  }
+}
 
 .button-scroll-up .button-scroll-icon {
     transform: rotate(-90deg);
-  }
+}
 
 .button-scroll-down .button-scroll-icon {
     transform: rotate(90deg);
-}
+} */
 
-/* --- Кнопка закриття (Modal / Menu) --- */
+/* ------------------- Кнопка закриття (Modal / Menu) ------------------- */
 .button-close {
     position: absolute;
     width: 32px;
@@ -76,13 +85,14 @@
 .button-close:hover {
     stroke: var();
     transform: rotate(90deg);
- }
+}
 
 .mobile-menu-button-close {
     top: 16px;
     right: 24px;
 }
 
+/* ------------------- Кнопка бургер меню ------------------- */
 .burger-menu {
     background-color: transparent;
     border: none;
@@ -90,15 +100,19 @@
     line-height: 0;
     stroke: var();
     cursor: pointer;
-    transition: stroke var(--anim-fast);
+    transition: stroke var(--transition);
 }
 
 .burger-menu:hover {
     stroke: var();
 }
 
-@media screen and (min-width: 1240px) {
+
+@media screen and (min-width: 768px) {
     .burger-menu {
         display: none;
     }
 }
+
+
+@media screen and (min-width: 1200px) {}

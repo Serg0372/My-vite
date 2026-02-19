@@ -11,46 +11,11 @@
     text-align: center;
 }
 
-.footer-link,
-.address-link {
-    font-family: var();
-    font-style: normal;
-    color: var();
-    transition: color var(--anim-fast);
+
+@media (min-width: 768px) {
+    .footer {
+        font-size: 16px;
+    }
 }
 
-.footer-link:hover,
-.address-link:hover {
-    color: var();
-}
-
-.address-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 24px;
-}
-
-.socials-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.socials-icon {
-    fill: var();
-    transition: fill var(--anim-fast);
-}
-
-.socials-link:hover .socials-icon {
-    fill: var();
-}
-
-.footer-legal {
-    font-size: var();
-}
-
-
-@media screen and (min-width: 767px) {}
-  
 @media screen and (min-width: 1240px) {}

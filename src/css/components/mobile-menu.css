@@ -33,9 +33,10 @@
     cursor: pointer;
 }
 
+/* 
 .mobile-menu-logo {
     margin-bottom: 40px;
-}
+} */
 
 .mobile-menu-list {
     display: flex;
@@ -48,7 +49,7 @@
     font-size: var();
     font-weight: var();
     color: var();
-    transition: color var(--anim-fast);
+    transition: color var(--transition);
 }
 
 .mobile-menu-link:hover,
@@ -56,10 +57,10 @@
     color: var();
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
     .mobile-menu {
         display: none;
     }
 }
 
-@media screen and (min-width: 1240px) {}
+@media screen and (min-width: 1200px) {}

@@ -7,7 +7,7 @@
     width: 72px;
     height: 38px;
     fill: var();
-    transition: fill var(--anim-fast);
+    transition: fill var(--transition);
 }
 
 .logo:hover .logo-icon,
@@ -15,14 +15,8 @@
     fill: var();
 }
 
-@media screen and (min-width: 767px) {
-    
-}
 
-@media screen and (min-width: 1240px) {
-    
-}
-
+/* ---------------- Burger Menu icon ---------------- */
 .burger-icon {
     width: 24px;
     height: 24px;
@@ -36,21 +30,19 @@
     fill: var();
 }
 
+/* ----------------Button Scroll icon ---------------- */
 
 .button-scroll-icon {
     fill: var();
-    transition: fill var(--anim-fast), transform var(--anim-fast);
+    transition: fill var(--transition), transform var(--transition);
 }
-
 
 .button-scroll-up .button-scroll-icon {
     transform: rotate(270deg);
-
 }
 
 .button-scroll-down .button-scroll-icon {
     transform: rotate(90deg);
-
 }
 
 .button-scroll:hover .button-scroll-icon,
@@ -58,12 +50,11 @@
     fill: var();
 }
 
-
+/* ---------------- Button Close icon ---------------- */
 .button-close-icon {
-
     fill: none;
     stroke: var();
-    transition: stroke var(--anim-fast);
+    transition: stroke var(--transitiont);
 }
 
 .button-close:hover .button-close-icon,
@@ -71,19 +62,10 @@
     stroke: var();
 }
 
+/* ---------------- Social icon ---------------- */
 
-.modal-logo {
-    display: block;
-    margin-bottom: 32px;
-}
 
-.modal-logo-icon {
-    fill: var();
-    /* У модалці зазвичай темне лого */
-    transition: fill var(--anim-fast);
-}
 
-.modal-logo:hover .modal-logo-icon,
-.modal-logo:focus .modal-logo-icon {
-    fill: var();
-}
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1200px) {}

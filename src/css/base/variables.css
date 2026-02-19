@@ -1,23 +1,37 @@
 :root {
-    --color-primary: ;
-    --color-brand-light:;
-    --color-brand-dark: ;
-    --color-light: ;
-    --color-dark: ;
+    --clr-brand-primary: ;
+    /* Основний*/
+    --clr-brand-pressed: ;
+    /* для ховерів/активних станів*/
+    --clr-brand-light: ;
+    /* для кнопок або фону*/
 
-    --color-input-text:;
-    --color-input-border:;
+    --clr-txt-main: ;
+    /* Основний текст*/
+    --clr-txt-title: ;
+    /* Заголовки та темні акценти*/
+    --clr-txt-light: ;
+    /* Білий текст (на темному фоні)*/
+    --clr-txt-helper: ;
+    /* Другорядний текст, іконки, адреса */
 
-    --hero-gradient: linear-gradient(deg,
-            rgba() 0%,
-            rgba() 50%,
-            rgba() 100%);
+    --clr-bg-main: ;
+    /* Основний фон сторінки */
+    --clr-bg-alt: ;
+    /* Світло-сірий фон для секцій (наприклад, Team) */
+    --clr-bg-dark: ;
+    /* Темний фон для Hero та Footer */
 
-  
+    --clr-border: ;
+    /* Колір рамок та ліній розділювачів (Cornflower) */
+    --clr-success: ;
+    /* Зелений для форм або успішних дій */
+
+    --hero-gradient: linear-gradient(deg, rgba() 0%, rgba() 50%, rgba() 100%);
+
     --primary-font: 'Roboto', sans-serif;
     --second-font: 'Playfair Display', serif;
 
-   
     --fw-light: 300;
     --fw-regular: 400;
     --fw-medium: 500;
@@ -25,26 +39,33 @@
     --fw-bold: 700;
     --fw-extrabold: 800;
 
-    --fs-xs: 12px;
-    --fs-s: 14px;
-    --fs-m: 16px;
-    --fs-l: 18px;
-    --fs-xl: 20px;
-    --fs-xxl: 24px;
-    --fs-h2: 32px;
-    --fs-h1: 44px;
-   
-    --lh-h: 1.2;
-    --lh-b: 1.3;
-    --lh-p: 1.5;
+    /* Базові (мобілка 320px+) */
+    --fs-hero: 36px;
+    --fs-h2: 28px;
+    --fs-h3: 20px;
+    --fs-main: 16px;
 
-    --anim-fast: 300ms ease-in-out;
-    --anim-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    --lh-hero: 1.11;
+    --lh-heading: 1.2;
+    --lh-main: 1.5;
+
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- Responsive Font Sizes --- */
-@media screen and (min-width: 1240px) {
+/* Планшет (768px+) */
+@media screen and (min-width: 768px) {
     :root {
-       
+        --fs-hero: 44px;
+        /* Збільшуємо для планшета */
+        --fs-h2: 32px;
+    }
+}
+
+/* ДЕСКТОП (від 1200px) */
+@media screen and (min-width: 1200px) {
+    :root {
+        --fs-hero: 56px;
+        /* Фінальний розмір за макетом */
+        --fs-h2: 36px;
     }
 }
