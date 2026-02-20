@@ -44,6 +44,7 @@ h6 {
 h1 {
   font-size: var();
   font-weight: var();
+  color: var();
 }
 
 h2 {
@@ -51,18 +52,6 @@ h2 {
   font-size: var();
   font-weight: var();
   text-align: center;
-}
-
-.accent-text {
-  font-weight: var();
-}
-
-.accent-color {
-  color: var();
-}
-
-.uppercase-text {
-  text-transform: uppercase;
 }
 
 .visually-hidden {

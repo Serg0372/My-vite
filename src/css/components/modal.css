@@ -6,7 +6,8 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
-    transition: opacity var(--transition), visibility var(--transition);
+    transition: opacity var(--transition),
+        visibility var(--transition);
 }
 
 .backdrop.is-hidden {
@@ -23,31 +24,21 @@
     width: 95%;
     max-width: 450px;
     background-color: var();
-    border-radius: 16px;
-    padding: 40px;
+    border-radius: px;
+    padding: px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-.modal-close-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    stroke: var();
 }
 
 .modal-title {
     font-family: var();
     font-size: var();
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     text-align: center;
 }
 
 .modal-text {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 0px;
     font-size: var();
 }
 
@@ -55,7 +46,7 @@
 @media screen and (min-width: 768px) {
     .modal {
         max-width: 500px;
-        padding: 60px;
+        padding: px;
     }
 }
 

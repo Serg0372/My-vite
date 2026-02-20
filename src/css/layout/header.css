@@ -8,25 +8,10 @@
     align-items: center;
 }
 
-/* .nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: px;
-    height: 100vh;
-    background: var();
-    padding: px px;
-    transition: var(--transition);
-}
-
-.nav.active {
-    right: 0;
-} */
-
 .nav-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: px;
 }
 
 @media (min-width: 768px) {
@@ -46,3 +31,5 @@
         display: none;
     }
 }
+
+@media screen and (min-width: 1200px) {}
