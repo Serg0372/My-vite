@@ -16,10 +16,6 @@
 }
 
 
-
-
-
-
 /* ---------------- Burger Menu icon ---------------- */
 .burger-icon {
     width: 24px;
@@ -27,7 +23,6 @@
     fill: var();
     stroke: var();
     transition: fill var(--transition), stroke var(--transition);
-    ;
 }
 
 .burger-menu:hover .burger-icon,
@@ -41,7 +36,7 @@
 .button-close-icon {
     fill: none;
     stroke: var();
-    transition: stroke var(--transitiont);
+    transition: stroke var(--transition);
 }
 
 .button-close:hover .button-close-icon,
@@ -50,7 +45,7 @@
 }
 
 
-/* ----------------Button Scroll icon ---------------- */
+/* ---------------- Button Scroll icon ---------------- */
 .button-scroll-icon {
     fill: var();
     transition: fill var(--transition), transform var(--transition);
