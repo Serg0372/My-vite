@@ -1,32 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Короткий опис сторінки." />
+
+    <title>WebForge Starter</title>
+
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
     <link rel="manifest" href="./favicon/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Title</title>
+
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css" />
-
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" />
     <link rel="stylesheet" href="src/css/styles.css" />
   </head>
+
   <body>
-    <load src="src/partials/header.html" />
+    <load src="src/partials/global/header.html" />
 
     <main>
-      <load src="src/partials/hero.html" />
+      <load src="src/partials/sections/hero.html" />
     </main>
 
-    <load src="src/partials/footer.html" />
+    <load src="src/partials/global/footer.html" />
 
-    <load src="src/partials/modal.html" />
-    <load src="src/partials/mobile-menu.html" />
-    <load src="src/partials/button-scroll.html" />
+    <load src="src/partials/global/modal.html" />
+    <load src="src/partials/global/mobile-menu.html" />
+    <load src="src/partials/global/button-scroll.html" />
 
-    <script type="module" src="src/main.js"></script>
+    <script type="module" src="src/js/main.js"></script>
   </body>
 </html>

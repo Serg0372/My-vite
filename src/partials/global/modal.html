@@ -1,17 +1,23 @@
 <div class="backdrop is-hidden" data-modal>
-  <div class="modal">
+  <div
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+    aria-describedby="modal-description">
     <button
       class="button-close modal-button-close js-close-modal"
       type="button"
       aria-label="Закрити">
-      <svg class="button-close-icon" width="24" height="24">
+      <svg class="button-close-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
         <use href="/icons/sprite.svg#icon-close"></use>
       </svg>
     </button>
 
     <div class="modal-content">
-      <h2 class="modal-title">Залишити заявку</h2>
-      <p class="modal-text">Ми зв'яжемося з вами найближчим часом</p>
+      <h2 class="modal-subtitle" id="modal-title"> Залишити заявку </h2>
+
+      <p class="modal-text" id="modal-description"> Ми зв'яжемося з вами найближчим часом </p>
 
       <form class="modal-form">
         <div class="form-field">
@@ -21,6 +27,7 @@
             name="user-name"
             id="user-name"
             placeholder=" "
+            autocomplete="name"
             required />
           <label class="form-label" for="user-name">Ім'я</label>
         </div>
@@ -32,6 +39,7 @@
             name="user-tel"
             id="user-tel"
             placeholder=" "
+            autocomplete="tel"
             required />
           <label class="form-label" for="user-tel">Телефон</label>
         </div>
@@ -43,13 +51,14 @@
             name="user-email"
             id="user-email"
             placeholder=" "
+            autocomplete="email"
             required />
           <label class="form-label" for="user-email">Email</label>
         </div>
 
-        <button class="button modal-submit-btn" type="submit">Відправити</button>
+        <button class="button modal-submit-btn" type="submit"> Відправити </button>
 
-        <p class="form-policy">
+        <p class="policy-text">
           Натискаючи кнопку, ви погоджуєтесь з
           <a href="#" class="policy-link">політикою конфіденційності</a>
         </p>

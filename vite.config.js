@@ -1,49 +1,50 @@
 import { defineConfig } from 'vite';
-import { glob } from 'glob';
+import { globSync } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 
-export default defineConfig(({ command }) => {
-  return {
-    base: './',
-    define: {
-      [command === 'serve' ? 'global' : '_global']: {},
+export default defineConfig({
+  // Відносні шляхи до ресурсів у готовій збірці
+  base: './',
+
+  // Налаштування обробки CSS
+  css: {
+    postcss: {
+      plugins: [
+        SortCss({
+          sort: 'mobile-first',
+        }),
+      ],
     },
-    root: './',
-    build: {
-      sourcemap: true,
-      rollupOptions: {
-        input: glob.sync('./*.html'),
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              return 'vendor';
-            }
-          },
-          entryFileNames: chunkInfo => {
-            if (chunkInfo.name === 'commonHelpers') {
-              return 'commonHelpers.js';
-            }
-            return '[name].js';
-          },
-          assetFileNames: assetInfo => {
-            if (assetInfo.name && assetInfo.name.endsWith('.html')) {
-              return '[name].[ext]';
-            }
-            return 'assets/[name]-[hash][extname]';
-          },
+  },
+
+  // Плагіни Vite
+  plugins: [injectHTML(), FullReload(['./**/*.html'])],
+
+  // Налаштування production-збірки
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+
+    rollupOptions: {
+      // Автоматичний пошук усіх HTML-сторінок у корені проєкту
+      input: globSync('./*.html'),
+
+      output: {
+        // Сторонні бібліотеки збираються в окремий файл
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
         },
+
+        // Назви JavaScript-файлів
+        entryFileNames: '[name].js',
+
+        // Назви інших ресурсів
+        assetFileNames: 'assets/[name]-[hash][extname]',
       },
-      outDir: 'dist',
-      emptyOutDir: true,
     },
-    plugins: [
-      injectHTML(),
-      FullReload(['./**/*.html']),
-      SortCss({
-        sort: 'mobile-first',
-      }),
-    ],
-  };
+  },
 });
